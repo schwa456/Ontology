@@ -2,28 +2,122 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>SQL to SPARQL Query</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Query Executor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .error {
+            color: red;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>SQL Query to SPARQL</h1>
-    <form action="/query" method="post">
-        <label for="sql_query">SQL Query:</label><br>
-        <textarea name="sql_query" rows="4" cols="50"></textarea><br><br>
-        <input type="submit" value="Submit">
+    <h1>SQL Query Executor</h1>
+    <form id="query-form">
+        <textarea id="sql-query" placeholder="Enter your SQL query here..."></textarea><br>
+        <button type="submit">Execute Query</button>
     </form>
-    <div id="result"></div>
+
+    <div class="error" id="error-message"></div>
+    <table id="result-table" style="display: none;">
+        <thead id="table-head"></thead>
+        <tbody id="table-body"></tbody>
+    </table>
 
     <script>
-        document.querySelector('form').onsubmit = async (e) => {
-            e.preventDefault();
-            const formData = new FormData(e.target);
-            const response = await fetch('/query', {
-                method: 'POST',
-                body: formData
-            });
-            const result = await response.json();
-            document.getElementById('result').textContent = JSON.stringify(result, null, 2);
-        };
+        document.getElementById('query-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const query = document.getElementById('sql-query').value;
+
+        fetch('/query', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ query: query })
+        })
+        .then(response => response.json())
+        .then(data => {
+            const errorMessage = document.getElementById('error-message');
+            const tableHead = document.getElementById('table-head');
+            const tableBody = document.getElementById('table-body');
+            const resultTable = document.getElementById('result-table');
+
+            if (data.error) {
+                errorMessage.textContent = data.error;
+                resultTable.style.display = 'none';
+            } else {
+                errorMessage.textContent = '';
+                tableHead.innerHTML = '';
+                tableBody.innerHTML = '';
+
+
+                // Create table headers
+                if (data.length > 0) {
+                    const headers = Object.keys(data[0]);
+                    const headRow = document.createElement('tr');
+                    headers.forEach(header => {
+                        const th = document.createElement('th');
+                        th.textContent = header;
+                        headRow.appendChild(th);
+                    });
+                    tableHead.appendChild(headRow)
+
+                    // 데이터 행 생성
+                    data.forEach(row => {
+                        const tr = document.createElement('tr');
+                        Object.values(row).forEach(cell => {
+                            const td = document.createElement('td');
+                            td.textContent = cell;
+                            tr.appendChild(td);
+                        });
+                        tableBody.appendChild(tr);
+                    });
+
+                    resultTable.style.display = 'table';
+                } else {
+                    errorMessage.textContent = 'No Results Found';
+                    resultTable.style.display = 'none';
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Fetch Error:'. error);
+            document.getElementById('error-message').textContent = 'An Error Occurred';
+            resultTable.style.display = 'none';
+        });
+    });
     </script>
 </body>
 </html>

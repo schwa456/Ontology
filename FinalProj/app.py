@@ -8,9 +8,20 @@ OWL_FILE_PATH = 'heritage_owl_by_schwa.owl'
 onto = get_ontology(OWL_FILE_PATH).load()
 
 data_properties = {prop.name.lower(): prop.name for prop in onto.data_properties()}
-print(data_properties)
 
 def sql_to_sparql(sql_query):
+
+    # SELECT * 쿼리 처리
+    if sql_query.strip().upper() == "SELECT * FROM HERITAGE;":
+        return """
+        PREFIX : <http://example.org/heritage_ontology#>
+        SELECT ?heritage ?property ?value
+        WHERE {
+            ?heritage a :Heritage .
+            ?heritage ?property ?value .
+        }
+        """
+
     parsed = sqlparse.parse(sql_query)[0]
     tokens = [token for token in parsed.tokens if not token.is_whitespace]
 
@@ -67,7 +78,7 @@ def index():
 # endpoint which executes received SQL query and reflects on ontology
 @app.route('/query', methods=['POST'])
 def query():
-    sql_query = request.form['sql_query']
+    sql_query = request.json['query']
     sparql_query = sql_to_sparql(sql_query)
 
     try:

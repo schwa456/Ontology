@@ -1,5 +1,5 @@
 import pandas as pd
-from owlready2 import get_ontology, Thing, DataProperty
+from owlready2 import get_ontology, Thing, DataProperty, ObjectProperty
 
 CSV_FILE_PATH = 'eng_col_heritage_data.csv'
 
@@ -52,6 +52,9 @@ with onto:
     class Latitude(Location):
         pass
 
+    class Address(Location):
+        pass
+
     class Type(Thing):
         pass
 
@@ -89,11 +92,11 @@ with onto:
         pass
     class hasNameHanja(Heritage >> str, DataProperty):
         pass
-    class hasCity(Heritage >> str, DataProperty):
+    class hasCity(Heritage >> City, ObjectProperty):
         pass
-    class hasDistrict(Heritage >> str, DataProperty):
+    class hasDistrict(Heritage >> District, ObjectProperty):
         pass
-    class hasManagementOrg(Heritage >> str, DataProperty):
+    class hasManagementOrg(Heritage >> ManagementOrg, ObjectProperty):
         pass
     class hasLongitude(Heritage >> str, DataProperty):
         pass
@@ -105,15 +108,15 @@ with onto:
         pass
     class isCanceled(Heritage >> str, DataProperty):
         pass
-    class hasType(Heritage >> str, DataProperty):
+    class hasType(Heritage >> Type, ObjectProperty):
         pass
-    class hasType1(Heritage >> str, DataProperty):
+    class hasType1(Heritage >> Type1, ObjectProperty):
         pass
-    class hasType2(Heritage >> str, DataProperty):
+    class hasType2(Heritage >> Type2, ObjectProperty):
         pass
-    class hasType3(Heritage >> str, DataProperty):
+    class hasType3(Heritage >> Type3, ObjectProperty):
         pass
-    class hasType4(Heritage >> str, DataProperty):
+    class hasType4(Heritage >> Type4, ObjectProperty):
         pass
     class hasQuantity(Heritage >> str, DataProperty):
         pass
@@ -123,7 +126,7 @@ with onto:
         pass
     class hasEra(Heritage >> str, DataProperty):
         pass
-    class isPossessedBy(Heritage >> str, DataProperty):
+    class isPossessedBy(Heritage >> Possessor, ObjectProperty):
         pass
     class hasImageURL(Heritage >> str, DataProperty):
         pass
@@ -136,28 +139,28 @@ for _, row in df.iterrows():
         heritage = Heritage(management_num)
         heritage.hasNameHangul.append(row['name_hangul'])
         heritage.hasNameHanja.append(row['name_hanja'])
-        heritage.hasCity.append(row['city'])
-        heritage.hasDistrict.append(row['district'])
-        heritage.hasManagementOrg.append(row['management_organization'])
+        heritage.hasCity.append(City(row['city']))
+        heritage.hasDistrict.append(District(row['district']))
+        heritage.hasManagementOrg.append(ManagementOrg(row['management_organization']))
         heritage.hasLongitude.append(row['longitude'])
         heritage.hasLatitude.append(row['latitude'])
         heritage.hasManagementNum.append(row['management_number'])
         heritage.hasAssociationNum.append(row['association_number'])
         #heritage.hasCityNumber.append(row['city_number'])
         heritage.isCanceled.append(row['canceled'])
-        heritage.hasType1.append(row['type1'])
-        heritage.hasType2.append(row['type2'])
-        heritage.hasType3.append(row['type3'])
-        heritage.hasType4.append(row['type4'])
+        heritage.hasType1.append(Type1(row['type1']))
+        heritage.hasType2.append(Type2(row['type2']))
+        heritage.hasType3.append(Type3(row['type3']))
+        heritage.hasType4.append(Type4(row['type4']))
 
         types = [str(row[t]).strip() for t in ['type1', 'type2', 'type3', 'type4'] if row[t] != '-']
-        heritage.hasType = [" ".join(types) if types else '']
+        heritage.hasType.append(Type(" ".join(types) if types else ''))
 
         heritage.hasQuantity.append(row['quantity'])
         heritage.hasDesignatedDate.append(row['designated_date'])
         heritage.hasAddress.append(row['address'])
         heritage.hasEra.append(row['era'])
-        heritage.isPossessedBy.append(row['possession'])
+        heritage.isPossessedBy.append(Possessor(row['possession']))
         heritage.hasImageURL.append(row['image_URL'])
         heritage.hasDescription.append(row['description'])
 
