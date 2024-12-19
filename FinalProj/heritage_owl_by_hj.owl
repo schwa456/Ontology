@@ -1,0 +1,1544 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/heritage_ontology"
+         xmlns="http://example.org/heritage_ontology#">
+
+<owl:Ontology rdf:about="http://example.org/heritage_ontology"/>
+
+<owl:Class rdf:about="#Information">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NameHangul">
+  <rdfs:subClassOf rdf:resource="#Information"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NameHanja">
+  <rdfs:subClassOf rdf:resource="#Information"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Quantity">
+  <rdfs:subClassOf rdf:resource="#Information"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Era">
+  <rdfs:subClassOf rdf:resource="#Information"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DesignatedDate">
+  <rdfs:subClassOf rdf:resource="#Information"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ImageURL">
+  <rdfs:subClassOf rdf:resource="#Information"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Description">
+  <rdfs:subClassOf rdf:resource="#Information"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Location">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#City">
+  <rdfs:subClassOf rdf:resource="#Location"/>
+</owl:Class>
+
+<owl:Class rdf:about="#District">
+  <rdfs:subClassOf rdf:resource="#Location"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Longitude">
+  <rdfs:subClassOf rdf:resource="#Location"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Latitude">
+  <rdfs:subClassOf rdf:resource="#Location"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Type">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Type1">
+  <rdfs:subClassOf rdf:resource="#Type"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Type2">
+  <rdfs:subClassOf rdf:resource="#Type"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Type3">
+  <rdfs:subClassOf rdf:resource="#Type"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Type4">
+  <rdfs:subClassOf rdf:resource="#Type"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Management">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ManagementNum">
+  <rdfs:subClassOf rdf:resource="#Management"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ManagementOrg">
+  <rdfs:subClassOf rdf:resource="#Management"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AssociationNum">
+  <rdfs:subClassOf rdf:resource="#Management"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Possessor">
+  <rdfs:subClassOf rdf:resource="#Management"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Heritage">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#10000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#20000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#30000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#40000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#50000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#60000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#70000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#80000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#90000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#100000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#110000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#120000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#130000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#140000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#150000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#160000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#170000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#180000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#190000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#200000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#210000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#220000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#230000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#240000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#250000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#260000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#270000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#280000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#290000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#300000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#310000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#320000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#330000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#340000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#350000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#360000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#370000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#380000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#390000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#400000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#410000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#420000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#430000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#440000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#450000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#460000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#470000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#480100">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#480200">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#490000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#500000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#510000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#520000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#530000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#540000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#550000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#560000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#570000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#580000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#590000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#600000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#610000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#620000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#630000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#640000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#650000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#660000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#670000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#680000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#690000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#700000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#710000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#720000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#730000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#740000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#750000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#760000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#770000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#780000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#790000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#800000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#810000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#820000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#830000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#840000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#850000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#860000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#870000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#880000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#890000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#900000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#910000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#920000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#930000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#940000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#950000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#960000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#970000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#980000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#990000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1000000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1010000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1020000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1030000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1040000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1050000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1060000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1070000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1080000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1090000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1100000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1110000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1120000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1130000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1140000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1150000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1160000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1170000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1180000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1190000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1200000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1210000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1220000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1230000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1240000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1250000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1260000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1270000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1280000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1290000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1300000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1310000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1320000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1330000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1340000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1350000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1360000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1370100">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1370200">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1380000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1390000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1400000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1410000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1420000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1430000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1440000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1450000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1460000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1470000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1480100">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1480200">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1490100">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1490200">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1500000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1510100">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1510200">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1510300">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1510400">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1510500">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1510600">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1520000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1530000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1540000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1550000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1560000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1570000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1580000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1590000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1600000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1610000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1620000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1630000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1640000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1650000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1660000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1670000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1690000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1700000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1710000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1720000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1730000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1740000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1750000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1760000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1770000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1780000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1790000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1800000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1810000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1820000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1830000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1840000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1850000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1860000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1870000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1880000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1890000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1900000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1910000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1920000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1930000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1940000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1950000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1960000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1970000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1980000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1990000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2000000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2010000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2020000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2030000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2040000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2050000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2060000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2070000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2080000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2090000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2100000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2110000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2120000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2130000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2140000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2150000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2160000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2170000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2180000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2190000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2200000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2210000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2220000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2230000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2240000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2250000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2260000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2270000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2280000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2290000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2300000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2310000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2320000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2330100">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2330200">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2340000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2350000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2360000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2370000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2380000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2390000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2400000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2410000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2420000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2430000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2440000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2450000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2460000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2470000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2480000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2490100">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2490200">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2500000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2510000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2520000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2530000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2540000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2550000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2560000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2570000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2580000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2590000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2600000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2610000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2620000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2630000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2640000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2650000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2660000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2670000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2680000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2690000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2700000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2710000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2720000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2730000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2750000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2760000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2770000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2790000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2800000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2810000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2820000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2830000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2840000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2850000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2860000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2870000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2880000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2890000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2900000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2910000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2920000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2930000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2940000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2950000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2960000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2970000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2980000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2990000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3000000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3010000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3020000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3030000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3040000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3050000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3060000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3060200">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3060300">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3060400">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3070000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3080000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3090000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3100000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3110000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3120000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3130000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3140000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3150000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3160000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3170000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3180000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3190100">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3190200">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3190300">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3200000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3210000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3220100">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3220200">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3230000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3240000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3250000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3260000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3270000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3280000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3290000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3300000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3310000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3320000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3330000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3340000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3350000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3360000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3370000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3380000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3390000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3400000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3410000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3420000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3430000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3440000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3450000">
+  <rdf:type rdf:resource="#Heritage"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

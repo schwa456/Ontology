@@ -2,55 +2,28 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heritage List with SQL Query</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 50px;
-        }
-        #query-form {
-            margin-bottom: 20px;
-        }
-        #query-result {
-            margin-top: 20px;
-            white-space: pre-wrap;
-            border: 1px solid #ccc;
-            padding: 10px;
-            background-color: #f9f9f9;
-        }
-    </style>
+    <title>SQL to SPARQL Query</title>
 </head>
 <body>
-    <h1>Heritage List with SQL Query</h1>
-
-    <form id="query-form">
-        <input type="text" id="sql-query" placeholder="Enter SQL query" style="width: 80%;" required>
-        <button type="submit">Run Query</button>
+    <h1>SQL Query to SPARQL</h1>
+    <form action="/query" method="post">
+        <label for="sql_query">SQL Query:</label><br>
+        <textarea name="sql_query" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit">
     </form>
-
-    <div id="query-result"></div>
+    <div id="result"></div>
 
     <script>
-        document.getElementById('query-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const query = document.getElementById('sql-query').value;
-
-            fetch('/run-query', {
+        document.querySelector('form').onsubmit = async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const response = await fetch('/query', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ query: query })
-            })
-            .then(response => response.json())
-            .then(data => {
-                const resultDiv = document.getElementById('query-result');
-                resultDiv.textContent = JSON.stringify(data, null, 2);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('query-result').textContent = 'Error executing query.';
+                body: formData
             });
-        });
+            const result = await response.json();
+            document.getElementById('result').textContent = JSON.stringify(result, null, 2);
+        };
     </script>
 </body>
 </html>

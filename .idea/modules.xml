@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Ontology.iml" filepath="$PROJECT_DIR$/.idea/Ontology.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../OntologyFinal/.idea/OntologyFinal.iml" filepath="$PROJECT_DIR$/../OntologyFinal/.idea/OntologyFinal.iml" />
     </modules>
   </component>
 </project>

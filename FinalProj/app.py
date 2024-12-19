@@ -1,29 +1,81 @@
-from flask import Flask, render_template, request, jsonify
-from models import Heritage, Session
-from sqlalchemy import text
+from flask import Flask, request, render_template, jsonify
+from owlready2 import get_ontology
+import sqlparse
+import re
 
 app = Flask(__name__)
+OWL_FILE_PATH = 'heritage_owl_by_schwa.owl'
+onto = get_ontology(OWL_FILE_PATH).load()
+
+data_properties = {prop.name.lower(): prop.name for prop in onto.data_properties()}
+print(data_properties)
+
+def sql_to_sparql(sql_query):
+    parsed = sqlparse.parse(sql_query)[0]
+    tokens = [token for token in parsed.tokens if not token.is_whitespace]
+
+    # SELECT 절 FIELD 추출
+    select_fields = []
+    for idx, token in enumerate(tokens):
+        if token.value.upper() == 'SELECT':
+            fields = tokens[idx+1].value.split(',')
+            select_fields = [field.strip().replace('.', '') for field in fields]
+
+    # WHERE 절 조건 추출
+    where_clause = ''
+    for idx, token in enumerate(tokens):
+        if token.value.upper() == 'WHERE':
+            where_clause = tokens[idx+1].value.strip()
+
+    sparql_fields = [data_properties.get(field, field) for field in select_fields]
+
+    # SPARQL SELECT 절 구성
+    sparql_select = ' '.join(f'?{field}' for field in sparql_fields)
+
+    # SPARQL WHERE 절 구성
+    sparql_where = ' '.join(f'?heritage :{field} ?{field} .' for field in sparql_fields)
+
+    # WHERE 절 조건을 SPARQL FILTER로 변환
+    sparql_filter = ''
+    if where_clause:
+        where_clause = re.sub(r"(\w+)\s*>=\s*'([\d\-]+)'", r'FILTER(?\1 >= "\2")', where_clause)
+        for sql_col, sparql_prop in data_properties.items():
+            where_clause = where_clause.replace(sql_col, sparql_prop)
+        sparql_filter = where_clause
+
+    # 최종 SPARQL 쿼리
+    sparql_query = f"""
+    PREFIX : <http://example.org/heritage_ontology#>
+    SELECT {sparql_select}
+    WHERE {{
+        ?heritage a :Heritage .
+        {sparql_where}
+        {sparql_filter}
+    }}
+    """
+
+    print("Generated SPARQL Query:")
+    print(sparql_query)
+
+    return sparql_query
 
 # homepage : rendering SQL input form
 @app.route('/')
 def index():
     return render_template('index.html')
 
-# endpoint which executes received SQL query
-@app.route('/run-query', methods=['POST'])
-def run_query():
-    session = Session()
+# endpoint which executes received SQL query and reflects on ontology
+@app.route('/query', methods=['POST'])
+def query():
+    sql_query = request.form['sql_query']
+    sparql_query = sql_to_sparql(sql_query)
+
     try:
-        query = request.json.get('query')
-        result = session.execute(text(query))
-        rows = [dict(row) for row in result]
-        session.commit()
-        return jsonify(rows)
+        results = list(onto.world.sparql(sparql_query))
+        result_list = [{field: str(value) for field, value in zip(sql_query.split()[1:], row)} for row in results]
+        return jsonify(result_list)
     except Exception as e:
-        session.rollback()
-        return jsonify({"error": str(e)})
-    finally:
-        session.close()
+        return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
     app.run(debug=True)
