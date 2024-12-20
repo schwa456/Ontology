@@ -47,7 +47,7 @@
 <body>
     <h1>SQL Query Executor</h1>
     <form id="query-form">
-        <textarea id="sql-query" placeholder="Enter your SQL query here..."></textarea><br>
+        <textarea id="sparql-query" placeholder="Enter your SPARQL query here..."></textarea><br>
         <button type="submit">Execute Query</button>
     </form>
 
@@ -60,7 +60,7 @@
     <script>
         document.getElementById('query-form').addEventListener('submit', function(event) {
             event.preventDefault();
-            const query = document.getElementById('sql-query').value;
+            const query = document.getElementById('sparql-query').value;
 
         fetch('/query', {
             method: 'POST',

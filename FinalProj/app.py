@@ -79,12 +79,13 @@ def index():
 # endpoint which executes received SQL query and reflects on ontology
 @app.route('/query', methods=['POST'])
 def query():
-    sql_query = request.json['query']
-    sparql_query = sql_to_sparql(sql_query)
+    #sql_query = request.json['query']
+    #sparql_query = sql_to_sparql(sql_query)
+    sparql_query = request.json['query']
 
     try:
         results = list(onto.world.sparql(sparql_query))
-        result_list = [{field: str(value) for field, value in zip(sql_query.split()[1:], row)} for row in results]
+        result_list = [{field: str(value) for field, value in zip(sparql_query.split()[1:], row)} for row in results]
         return jsonify(result_list)
     except Exception as e:
         return jsonify({'error': str(e)})
