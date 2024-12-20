@@ -2,6 +2,7 @@ from flask import Flask, request, render_template, jsonify
 from owlready2 import get_ontology
 import sqlparse
 import re
+import os
 
 app = Flask(__name__)
 OWL_FILE_PATH = 'heritage_owl_by_schwa.owl'
@@ -89,4 +90,5 @@ def query():
         return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 10000))
+    app.run(dhost='0.0.0.0', port=port, debug=True)
