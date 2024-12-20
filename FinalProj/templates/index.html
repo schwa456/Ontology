@@ -3,121 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPARQL Query Executor</title>
+    <title>Heritage Connect</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 50px;
-        }
-        h1 {
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+            color: #333;
             text-align: center;
         }
-        form {
-            margin-bottom: 20px;
-            text-align: center;
+
+        header {
+            background: url("../static/images/image.png") no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 100px 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 텍스트 가독성을 위한 그림자 */
+            position: relative;
         }
-        textarea {
-            width: 80%;
-            height: 100px;
+
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        /* 설명 문구 스타일 */
+        .description ul.search-info {
+            list-style-type: disc;
+            margin: 20px auto;
+            text-align: left;
+            max-width: 600px;
+            padding-left: 20px;
+            color: #333;
+        }
+
+        .description ul.search-info li {
             margin-bottom: 10px;
         }
+
+
+        main {
+            padding: 20px;
+        }
+
+        form {
+            margin: 20px auto;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
         button {
+            margin-top: 10px;
+            background-color: #654321;
+            color: white;
+            border: none;
             padding: 10px 20px;
             font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
         }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
         table {
             width: 100%;
+            margin: 20px auto;
             border-collapse: collapse;
-            margin-top: 20px;
+            max-width: 800px;
         }
+
         th, td {
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
             padding: 10px;
-            text-align: center;
         }
+
         th {
             background-color: #f2f2f2;
         }
+
         .error {
             color: red;
-            text-align: center;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <h1>SPARQL Query Executor</h1>
-    <form id="query-form">
-        <textarea id="sparql-query" placeholder="Enter your SPARQL query here..."></textarea><br>
-        <button type="submit">Execute Query</button>
-    </form>
 
-    <div class="error" id="error-message"></div>
-    <table id="result-table" style="display: none;">
-        <thead id="table-head"></thead>
-        <tbody id="table-body"></tbody>
-    </table>
+    <header>
+        <h1>Heritage Connect</h1>
+    </header>
+
+    <div class="description">
+        <p>"문화재 데이터를 조회하거나 검색할 수 있습니다."</p>
+        <p>검색할 수 있는 항목:</p>
+        <ul class="search-info">
+            <li>문화재 이름 (한글/한자): 예) 남대문, 숭례문, 崇禮門</li>
+            <li>위치: 도시 (서울, 경주), 구/군 (중구, 합천군)</li>
+            <li>유형: 유적건조물, 성곽시설 등</li>
+            <li>시대: 조선, 고려, 신라</li>
+            <li>지정일: 예) 1962-12-20</li>
+            <li>기타: 경도/위도, 상세설명, 주소</li>
+        </ul>
+    </div>
+
+
+    <main>
+        <form id="query-form">
+            <textarea id="sql-query" placeholder="SPARQL 쿼리를 입력하세요"></textarea><br>
+            <button type="submit">Execute Query</button>
+        </form>
+
+        <div class="error" id="error-message"></div>
+        <table id="result-table" style="display: none;">
+            <thead id="table-head"></thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </main>
+
+
+
+    <footer>
+        <p>© 2024 Heritage Connect. All rights reserved.</p>
+    </footer>
 
     <script>
         document.getElementById('query-form').addEventListener('submit', function(event) {
             event.preventDefault();
-            const query = document.getElementById('sparql-query').value;
+            const query = document.getElementById('sql-query').value;
 
-        fetch('/query', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ query: query })
-        })
-        .then(response => response.json())
-        .then(data => {
-            const errorMessage = document.getElementById('error-message');
-            const tableHead = document.getElementById('table-head');
-            const tableBody = document.getElementById('table-body');
-            const resultTable = document.getElementById('result-table');
+            fetch('/query', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ query: query })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const errorMessage = document.getElementById('error-message');
+                const tableHead = document.getElementById('table-head');
+                const tableBody = document.getElementById('table-body');
+                const resultTable = document.getElementById('result-table');
 
-            if (data.error) {
-                errorMessage.textContent = data.error;
-                resultTable.style.display = 'none';
-            } else {
-                errorMessage.textContent = '';
-                tableHead.innerHTML = '';
-                tableBody.innerHTML = '';
-
-
-                // Create table headers
-                if (data.length > 0) {
-                    const headers = Object.keys(data[0]);
-                    const headRow = document.createElement('tr');
-                    headers.forEach(header => {
-                        const th = document.createElement('th');
-                        th.textContent = header;
-                        headRow.appendChild(th);
-                    });
-                    tableHead.appendChild(headRow)
-
-                    // 데이터 행 생성
-                    data.forEach(row => {
-                        const tr = document.createElement('tr');
-                        Object.values(row).forEach(cell => {
-                            const td = document.createElement('td');
-                            td.textContent = cell;
-                            tr.appendChild(td);
-                        });
-                        tableBody.appendChild(tr);
-                    });
-
-                    resultTable.style.display = 'table';
-                } else {
-                    errorMessage.textContent = 'No Results Found';
+                if (data.error) {
+                    errorMessage.textContent = data.error;
                     resultTable.style.display = 'none';
+                } else {
+                    errorMessage.textContent = '';
+                    tableHead.innerHTML = '';
+                    tableBody.innerHTML = '';
+
+                    if (data.length > 0) {
+                        const headers = Object.keys(data[0]);
+                        const headRow = document.createElement('tr');
+                        headers.forEach(header => {
+                            const th = document.createElement('th');
+                            th.textContent = header;
+                            headRow.appendChild(th);
+                        });
+                        tableHead.appendChild(headRow)
+
+                        data.forEach(row => {
+                            const tr = document.createElement('tr');
+                            Object.values(row).forEach(cell => {
+                                const td = document.createElement('td');
+                                td.textContent = cell;
+                                tr.appendChild(td);
+                            });
+                            tableBody.appendChild(tr);
+                        });
+
+                        resultTable.style.display = 'table';
+                    } else {
+                        errorMessage.textContent = 'No Results Found';
+                        resultTable.style.display = 'none';
+                    }
                 }
-            }
-        })
-        .catch(error => {
-            console.error('Fetch Error:'. error);
-            document.getElementById('error-message').textContent = 'An Error Occurred';
-            resultTable.style.display = 'none';
+            })
+            .catch(error => {
+                console.error('Fetch Error:', error);
+                document.getElementById('error-message').textContent = 'An Error Occurred';
+                resultTable.style.display = 'none';
+            });
         });
-    });
     </script>
 </body>
 </html>
